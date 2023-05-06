@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${MYSQL_USER_NAME:root}
-    password: ${MYSQL_PASSWORD:123456}
-    url: ${JDBC_URL:jdbc:mysql://localhost:3309/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true}
+    password: ${MYSQL_PASSWORD:esther123}
+    url: ${JDBC_URL:jdbc:mysql://192.168.1.217:3306/chat?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true}
 
 #mybatis-plus:
 #  configuration:
@@ -12,25 +12,25 @@ spring:
 
 chat:
   # OpenAI API Key - https://platform.openai.com/account/api-keys
-  openai_api_key: ${CHAT_OPENAI_API_KEY:}
+  openai_api_key: ${CHAT_OPENAI_API_KEY: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}
   # change this to an `accessToken` extracted from the ChatGPT site's `https://chat.openai.com/api/auth/session` response
   openai_access_token: ${CHAT_OPENAI_ACCESS_TOKEN:}
   # OpenAI API Base URL - https://api.openai.com/，要加/后缀
   openai_api_base_url: ${CHAT_OPENAI_API_BASE_URL:https://api.openai.com/}
   # API Model - https://platform.openai.com/docs/models apiKey 和 AccessToken mode 不一样
-  openai_api_model: ${CHAT_OPENAI_API_MODEL:}
+  openai_api_model: ${CHAT_OPENAI_API_MODEL:gpt-3.5-turbo}
   # 反向代理地址 AccessToken 时使用
   api_reverse_proxy: ${CHAT_API_REVERSE_PROXY:}
   # 超时毫秒
   timeout_ms: ${CHAT_TIMEOUT_MS:100000}
   # HTTP 代理
-  http_proxy_host: ${CHAT_HTTP_PROXY_HOST:127.0.0.1}
+  http_proxy_host: ${CHAT_HTTP_PROXY_HOST:}
   # HTTP 代理
   http_proxy_port: ${CHAT_HTTP_PROXY_PORT:}
   # 管理端账号
   admin_account: ${CHAT_ADMIN_ACCOUNT:admin}
   # 管理端密码
-  admin_password: ${CHAT_ADMIN_PASSWORD:admin}
+  admin_password: ${CHAT_ADMIN_PASSWORD:mychat99099}
   # 全局时间内最大请求次数
   maxRequest: ${CHAT_MAX_REQUEST:}
   # 全局最大请求时间间隔（秒）
@@ -45,15 +45,15 @@ chat:
 # 邮箱验证相关
 email:
   # SMTP服务器地址
-  host: ${EMAIL_HOST:xxxxxx}
+  host: ${EMAIL_HOST:smtp.gmail.com}
   # 服务器一般默认 25 端口
   port: ${EMAIL_PORT:25}
-  # 发件人前缀
-  from: ${EMAIL_FROM:xxxxxx}
-  # 用户名
-  user: ${EMAIL_USER:xxxxxx}
+  # 邮箱地址
+  from: ${EMAIL_FROM:zhangrooberto@gmail.com}
+  # 用户名，发件人前缀
+  user: ${EMAIL_USER:zhangrooberto}
   # 如果要授权码，这里就是传授权码
-  pass: ${EMAIL_PASS:}
+  pass: ${EMAIL_PASS:yonxanhuneroiwsk}
   # 是否需要授权，决定是否要设置授权码
   auth: ${EMAIL_AUTH:true}
   # 邮箱验证码有效期（单位，分钟）
